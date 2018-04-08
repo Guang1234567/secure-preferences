@@ -1,12 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        google()
         jcenter()
+        mavenCentral()
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-  }
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+    }
 }
 
 def isReleaseBuild() {
@@ -18,8 +20,15 @@ allprojects {
     group = GROUP
 
     repositories {
+        jcenter()
         mavenCentral()
         google()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+        maven {
+            url 'https://jitpack.io'
+        }
     }
 }
 

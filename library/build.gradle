@@ -1,11 +1,5 @@
 apply plugin: 'com.android.library'
 
-
-repositories {
-    google()
-    jcenter()
-}
-
 android {
     compileSdkVersion 27
     buildToolsVersion '26.0.3'
@@ -22,7 +16,8 @@ android {
 
     dependencies {
 
-        compile 'com.scottyab:aes-crypto:0.0.5'
+        //compile 'com.scottyab:aes-crypto:0.0.5'
+        compile 'com.github.tozny:java-aes-crypto:+'
 
         //used when referencing a local copy of aes-crypto
         //compile project(':aes-crypto-release')

@@ -331,7 +331,7 @@ public class TestSecurePreferences extends AndroidTestCase {
 
         String cipherText = securePrefs.getEncryptedString(key, null);
         try {
-            securePrefs.handlePasswordChange("myfirstpassword", getContext(), 1000);
+            securePrefs.handlePasswordChange("myfirstpassword", getContext());
         } catch (GeneralSecurityException e) {
             fail("error changing passwd: " + e.getMessage());
         }
